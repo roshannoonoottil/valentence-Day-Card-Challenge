@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Valentine's Day</title>
+<style>
+    #movingButton {
+        position: absolute;
+    }
+</style>
+</head>
+<body>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle, #4f98ca, #a2a2a2);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        h1 {
+            color: #e73838;
+        }
+        p {
+            color: #555;
+        }
+        .heart {
+            color: #e73838;
+            font-size: 100px;
+        }
+        .container {
+        max-width: 800px;
+        margin: 20px auto;
+        text-align: center;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #00f335;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #bf2f2f;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <div class="container">
+        <h1>Happy Valentine's Day!</h1>
+        <p style="color: rgb(85, 6, 221);">Will You Be My Valentine ??</p>
+        <p><i class="heart">&hearts;</i></p>
+    </div>
+
+    <div class="container">
+        <button id="loveButton" onclick="showLoveAlert()">Yes</button>
+    </div>
+
+<button id="movingButton" style="color: #000000; background-color: #e73838;">NO</button>
+
+<script>
+    const button = document.getElementById('movingButton');
+
+    function moveButtonRandomly() {
+        const maxX = window.innerWidth - button.offsetWidth;
+        const maxY = window.innerHeight - button.offsetHeight;
+
+        const randomX = Math.floor(Math.random() * maxX);
+        const randomY = Math.floor(Math.random() * maxY);
+
+        button.style.left = `${randomX}px`;
+        button.style.top = `${randomY}px`;
+    }
+
+    button.addEventListener('mouseover', moveButtonRandomly);
+
+    function showLoveAlert() {
+    alert('Spreading love! \u2764 \u2764 \u2764');
+}
+
+</script>
+
+</body>
+</html>
